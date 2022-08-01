@@ -6,8 +6,8 @@
 
 int main(void)
 {
+    int line;
     char user_input, element;
-    int line, rank, index, line_counter;
 
     printf("Input start alpha:");
     scanf("%c", &user_input);
@@ -18,7 +18,7 @@ int main(void)
         int i, j, h;
         element = START_ALPHA - 1;
         /* 处理留白 */
-        for (i = 0; i < user_input - START_ALPHA - line + 1; i++)
+        for (i = 0; i < user_input - START_ALPHA + 1 - line; i++)
         {
             printf(" ");
         }
