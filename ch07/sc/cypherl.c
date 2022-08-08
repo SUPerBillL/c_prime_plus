@@ -11,7 +11,6 @@ int main(void)
         if (ch == SPACE)
             putchar(ch);
         else
-
             putchar(ch + 1);
         ch = getchar();
     }
