@@ -6,32 +6,32 @@
 
 int main(void)
 {
-    int line, index, num;
+    int line, index, line_counter;
     char user_input, element;
 
     printf("Input start alpha:");
     scanf("%c", &user_input);
-    num = user_input - START_ALPHA + 1;
+    line = user_input - START_ALPHA + 1;
 
-    for (line = 0; line < num; line++)
+    for (line_counter = 0; line_counter < line; line_counter++)
     /* 外层循环处理行转换 */
     {
         element = START_ALPHA - 1;
         /* 处理留白 */
-        for (index = 0; index < num - line; index++)
+        for (index = 0; index < line - line_counter; index++)
         {
             printf(" ");
         }
 
         /* 处理增字符 */
-        for (index = 0; index < line + 1; index++)
+        for (index = 0; index < line_counter + 1; index++)
         {
             element++;
             printf("%c", element);
         }
 
         /* 处理减字符 */
-        for (index = 0; index < line; index++)
+        for (index = 0; index < line_counter; index++)
         {
             element--;
             printf("%c", element);
