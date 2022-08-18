@@ -9,6 +9,7 @@ int main(void)
 {
     unsigned int user_input;
     _Bool is_prime;
+    int i, j;
 
     printf("Input integer(lt zero to quit):");
     while (scanf("%u", &user_input) == 1)
@@ -16,20 +17,16 @@ int main(void)
         if (user_input <= 0)
             break;
         
-        for (int i = 1; i < user_input; i++)
+        for (i = 1; i < user_input; i++)
         {
-            for (int count = 1; count * count < i; count++)
+            is_prime = true;
+            for (j = 2; j < i; j++)
             {
-                for (int j = 1; j < count; j++)
-                {
-                    if (count % j == 0)
-                        is_prime = false;
-                }
-                if (is_prime == true)
-                {
-                    printf("lt %u prime is:%d\n", user_input, count);
-                }
+                if (i % j == 0)
+                    is_prime = false;
             }
+            if (is_prime)
+                printf("lt %d prime is: %d\n", user_input, j);
         }
     }
 }
