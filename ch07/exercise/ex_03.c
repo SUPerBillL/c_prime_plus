@@ -10,6 +10,7 @@ int main(void)
     int user_input;
     int odd_number_counter = 0;
     int even_number_counter = 0;
+    /* 此处定义奇偶数的和是否更加易于扩展 */
     float odd_numer_avgs = 0;
     float even_numer_avgs = 0;
 
@@ -18,12 +19,13 @@ int main(void)
     {
         if (user_input == 0)
             break;
-        else if (user_input % 2 == 0)
+        /* 此处修改为单独的测试分支会更加符合逻辑 */
+        if (user_input % 2 == 0)
         {
             even_numer_avgs = (even_number_counter * even_numer_avgs + user_input) / (even_number_counter + 1);
             even_number_counter++;
         }
-        else if (user_input % 2 != 0)
+        else
         {
             odd_numer_avgs = (odd_number_counter * odd_numer_avgs + user_input) / (odd_number_counter + 1);
             odd_number_counter++;
