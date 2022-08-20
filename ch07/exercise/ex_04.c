@@ -14,7 +14,7 @@ int main(void)
     int exclamation_count = 0;
 
     printf("Input characters your want"
-            "change period and exclamation(# to end):");
+           "change period and exclamation(# to end):");
     while ((ch = getchar()) != '#')
     {
         if (ch == PERIOD)

@@ -1,6 +1,6 @@
 /*
-* 使用 switch 重写练习4
-*/
+ * 使用 switch 重写练习4
+ */
 #include <stdio.h>
 #define PERIOD '.'
 #define EXCLAMATION '!'
@@ -12,22 +12,22 @@ int main(void)
     int exclamation_count = 0;
 
     printf("Input characters your want"
-            "change period and exclamation(# to end):");
+           "change period and exclamation(# to end):");
     while ((ch = getchar()) != '#')
     {
         switch (ch)
         {
-            case PERIOD:
-                putchar(EXCLAMATION);
-                period_count++;
-                break;
-            case EXCLAMATION:
-                putchar(EXCLAMATION);
-                putchar(EXCLAMATION);
-                exclamation_count++;
-                break;
-            default:
-                putchar(ch);
+        case PERIOD:
+            putchar(EXCLAMATION);
+            period_count++;
+            break;
+        case EXCLAMATION:
+            putchar(EXCLAMATION);
+            putchar(EXCLAMATION);
+            exclamation_count++;
+            break;
+        default:
+            putchar(ch);
         }
     }
 

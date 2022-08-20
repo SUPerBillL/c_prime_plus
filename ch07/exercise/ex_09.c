@@ -1,9 +1,9 @@
 /*
-* 编写一个程序, 只接受正整数的输入, 然后显示所有小于或等于
-* 该数的素数.
-*/
+ * 编写一个程序, 只接受正整数的输入, 然后显示所有小于或等于
+ * 该数的素数.
+ */
 #include <stdio.h>
-# include <stdbool.h>
+#include <stdbool.h>
 
 int main(void)
 {
@@ -16,7 +16,7 @@ int main(void)
     {
         if (user_input <= 0)
             break;
-        
+
         for (i = 1; i < user_input; i++)
         {
             is_prime = true;

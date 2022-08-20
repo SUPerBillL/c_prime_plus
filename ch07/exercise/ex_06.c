@@ -1,10 +1,9 @@
 /*
-* 编写程序读取输入, 读到#停止, 报告ei出现的次数
-* 注意:程序要记录前一个字符和当前字符.
-* 用"Receive your eieio award" 输入测试.
-*/
+ * 编写程序读取输入, 读到#停止, 报告ei出现的次数
+ * 注意:程序要记录前一个字符和当前字符.
+ * 用"Receive your eieio award" 输入测试.
+ */
 #include <stdio.h>
-// #include <stdbool.h>
 /* 此处常量名定义更加易于扩展和修改 */
 #define FIRST 'e'
 #define SECOND 'i'
@@ -43,7 +42,7 @@ void get_char_pair(char first, char second)
             break;
         case SECOND:
             if (halfpair)
-            {   
+            {
                 halfpair = 0;
                 counter++;
             }
